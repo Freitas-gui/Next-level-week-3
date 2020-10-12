@@ -1,0 +1,2 @@
+Cria uma aplicação react com nome web e utilizando templates do typescript
+    yarn create react-app web --template typescript
