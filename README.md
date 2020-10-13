@@ -47,3 +47,32 @@ This project was developed using these technologies
 - [Node.js](https://nodejs.org/en/docs/)
 - [Typescript](https://www.typescriptlang.org/)
 - [React](https://pt-br.reactjs.org/)
+
+## :📚: Back-end, front-end and API concepts
+ReactJS:
+React is the most popular JavaScript library and is used to build a user interface (UI). It provides an excellent response for the user to add commands using a new method of rendering websites.
+
+RESTful API:
+RESTful API is an interface that provides data in a standardized format based on HTTP requests. Restful APIs increase performance for competitive situations, that is, when many people are asking for the same thing at the same time. They use verbs to define the purpose of the request being sent.
+
+
+mermaid graph TD A [Front-end App - HTML, CSS, JS] - Requisition / orphanages -> B [Server Back-end - Database, email, authentication] B - List of orphanages in JSON - -> AC [Browser - Client]
+
+Diagram of how the communication between the server, the front-end and the browser will be in the application
+
+SPA (Single Page Applications):
+The acronym SPA comes from Single Page Applications. In general, in a SPA application, the resources are loaded only once: the first time the user accesses the application. In this first access, all the HTML, CSS and JavaScript content is already transferred to the client. From this moment, when the user moves through the application pages, it will no longer be necessary to make requests to the server to load these new pages.
+
+Typescript:
+TypeScript is a superset of ECMAScript 6 which, in turn, is a superset of ECMAScript 5, which we use most often as a basis for our classic JavaScript. What is different about TypeScript from JavaScript are many things. Really many things. So much so that it would be impossible to go into detail about all of them here. What I'm going to bring in this article is just the most basic features and how to set up the environment so that your code works smoothly.
+
+## :⚙️: Application development
+First steps:
+
+Install Node.js (version> 12.0)
+Install a package manager for Node.js modules (ex: yarnpkg, npm ...)
+Using npx, run the command:
+npx create-react-app web --template typescript
+
+Using yarn, run the command:
+yarn create react-app web --template typescript
