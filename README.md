@@ -7,9 +7,9 @@
 </p>
 
 
-<p align = "center">
-  <b> Bringing happiness to the world. </b>
-</p>
+<h1 align = "center">
+  Bringing happiness to the world.
+</h1>
 
 > Project Status: In development :warning:
 
