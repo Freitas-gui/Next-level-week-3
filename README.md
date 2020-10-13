@@ -1,5 +1,5 @@
 <p align = "center">
-  <img src = "./nlw-cloak.jpg" alt = "NLW" width="22%"/>
+  <img src = "./nlw-cloak.jpg" alt = "NLW" width="340px"/>
 </p>
 
 <p align = "center">
