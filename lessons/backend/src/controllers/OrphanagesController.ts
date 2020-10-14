@@ -5,57 +5,77 @@ import Orphanage from '../models/Orphanage'
 
 export default {
   async index(request: Request, response: Response){
-    const orphanagesRepository = getRepository(Orphanage)
+    try {  
+      const orphanagesRepository = getRepository(Orphanage)
 
-    const orphanages = await orphanagesRepository.find()
+      const orphanages = await orphanagesRepository.find({
+        relations:['images']
+      })
 
-    return response.json(orphanages)
+      return response.json(orphanages)
+    } catch(err){
+      console.log(err)
+    }
   },
 
   async show(request: Request, response: Response){
-    const { id } = request.params
+    try {
+      const { id } = request.params
 
-    const orphanagesRepository = getRepository(Orphanage)
+      const orphanagesRepository = getRepository(Orphanage)
 
-    const orphanage = await orphanagesRepository.findOneOrFail(id)
+      const orphanage = await orphanagesRepository.findOneOrFail(id, {
+        relations:['images']
+      })
 
-    return response.json(orphanage)
+      return response.json(orphanage)
+    } catch(err){
+        console.log(err)
+      }
   },
   
   async create(request: Request, response: Response){
-    const {
-      name,
-      latitude,
-      longitude,
-      about,
-      instructions,
-      opening_hours,
-      open_on_weekends,
-      } = request.body
-    
-    
-    const orphanagesRepository = getRepository(Orphanage)
-    
-    const requestImages = request.files as Express.Multer.File[]
-    
-    const images = requestImages.map(image => {
-      return { path: image.filename }
-    })
 
-    const orphanage = orphanagesRepository.create({
-      name,
-      latitude,
-      longitude,
-      about,
-      instructions,
-      opening_hours,
-      open_on_weekends,
-      images
-    })
     
-    await orphanagesRepository.save(orphanage)
+    try {
+      const {
+        name,
+        latitude,
+        longitude,
+        about,
+        instructions,
+        opening_hours,
+        open_on_weekends,
+        } = request.body
+      
+      
+      const orphanagesRepository = getRepository(Orphanage)
+      
+      const requestImages = request.files as Express.Multer.File[]
+      
+      const images = requestImages.map(image => {
+        return { path: image.filename }
+      })
+
+      const orphanage = orphanagesRepository.create({
+        name,
+        latitude,
+        longitude,
+        about,
+        instructions,
+        opening_hours,
+        open_on_weekends,
+        images
+      })
+      
+      await orphanagesRepository.save(orphanage)
+      
+      return response.status(201).json(orphanage)
+    } catch(err){
+      console.log(err)
+    } 
     
-    return response.status(201).json(orphanage)
   }
 
 }
+
