@@ -11,8 +11,8 @@ import '../styles/pages/orphanages-map.css'
 import mapIcon from "../utils/mapIcon";
 import api from "../services/api"
 
-import BigSidebar, {getUserIsOrphanage} from  '../components/BigSidebar'
-
+import BigSidebar from  '../components/BigSidebar'
+import {user_is_orphanage} from  '../components/BigSidebar'
 
 interface Orphanage{
     id: number
@@ -38,7 +38,7 @@ function OrphanagesMap(){
             <BigSidebar
                 title={"Traga mais vizitantes para o seu orfanato"}
                 subTitle={"Esses são alguns orfanatos já cadastrados no nosso site. Cadastre um novo orfanato no botão +"}
-                user_is_orphanage={getUserIsOrphanage()}
+                user_is_orphanage={user_is_orphanage}
             />
                                         
             <Map 
@@ -72,7 +72,7 @@ function OrphanagesMap(){
             })}
             </Map>
             
-            { getUserIsOrphanage() ? 
+            { user_is_orphanage ? 
                 <Link to="/orphanages/create" className="create-orphanage">
                     <FiPlus size={32} color='#FFF'/>
                 </Link> 

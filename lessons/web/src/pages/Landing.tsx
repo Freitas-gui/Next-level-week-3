@@ -7,9 +7,7 @@ import {Link} from 'react-router-dom'
 import '../styles/pages/landing.css';
 import logoImg from '../images/logo.svg'
 
-import {localStorage, isOrphanage, isVisitor, user_is_orphanage} from '../components/BigSidebar'
-
-
+import {isOrphanage, isVisitor} from  '../components/BigSidebar'
 
 function Landing(){
 
@@ -50,3 +48,4 @@ function Landing(){
 }
 
 export default Landing 
+
