@@ -2,6 +2,8 @@ import { title } from 'process';
 import React, { Component } from 'react'
 import mapMarkerImg from '../images/map-marker.svg';
 
+import { createStore } from 'redux'
+
 
 interface MyComponentProps{
     title:string
@@ -9,15 +11,25 @@ interface MyComponentProps{
     user_is_orphanage : boolean
 }
 
-export var user_is_orphanage :boolean
+export var localStorage = require('localStorage')
+ , user_is_orphanage = { is_orphanage: false }
+
 
 export function isOrphanage(){
-    user_is_orphanage=true
+    localStorage.setItem('is_orphanage', false);
+    alert(getUserIsOrphanage())
 }
 export function isVisitor(){
-    user_is_orphanage=false
+    localStorage.setItem('is_orphanage', false);
+    alert(getUserIsOrphanage())
 }
-  
+
+ export function getUserIsOrphanage(){
+     return localStorage.getItem('is_orphanage');
+ }
+
+
+
 export default class BigSidebar extends React.Component<MyComponentProps> {
 
       
