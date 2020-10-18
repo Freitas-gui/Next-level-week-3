@@ -3,8 +3,6 @@ import mapMarkerImg from '../images/map-marker.svg';
 
 
 interface MyComponentProps{
-    title:string
-    subTitle:string
     user_is_orphanage : boolean
 }
 

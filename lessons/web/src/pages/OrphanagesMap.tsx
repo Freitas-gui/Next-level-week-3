@@ -36,8 +36,6 @@ function OrphanagesMap(){
         <div id="page-map">
 
             <BigSidebar
-                title={"Traga mais vizitantes para o seu orfanato"}
-                subTitle={"Esses são alguns orfanatos já cadastrados no nosso site. Cadastre um novo orfanato no botão +"}
                 user_is_orphanage={user_is_orphanage}
             />
                                         
