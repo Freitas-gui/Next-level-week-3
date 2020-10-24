@@ -14,7 +14,7 @@
 > Project Status: In development :warning:
 
 ## :page_facing_up: About
-Happy is a Web and Mobile application that provides information about orphanages close to your home and with that you have the possibility to go to the place of distribution of happiness to children.
+Happy is a Web and Mobile application that provides information about orphanages close to your home and with that you have the possibility to go to the place to distribute of happiness to children.
 
 ## :mortar_board: Project
 Project developed during [Next week's Level] (https://nextlevelweek.com/inscricao/3) which is required by [Rocketseat] (https://github.com/Rocketseat) during October 12th, 18th 2020.
