@@ -1,12 +1,3 @@
-<p align = "center">
-  <img src = "./nlw-cloak.jpg" alt = "NLW" width="340px"/>
-</p>
-
-<p align = "center">
-  <img src = "./happy-logo.png" alt = "Happy" />
-</p>
-
-
 <h1 align = "center">
   Bringing happiness to the world.
 </h1>
